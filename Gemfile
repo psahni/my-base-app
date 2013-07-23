@@ -18,7 +18,9 @@ gem 'mysql2'
 # gem "pg", :require => "pg"
 # gem "thin"
 # gem 'passenger'
+
 # Authentication
+#------------------------------------------------------------------------------
 # gem 'devise'
 
 
@@ -39,8 +41,9 @@ gem 'mysql2'
 #gem 'rails-backbone', github: "ekampp/backbone-rails"
 #gem 'jquery-rails'
 #gem 'fancybox-rails', github: "sverigemeny/fancybox-rails"
-#gem "twitter-bootstrap-rails"
-
+gem "twitter-bootstrap-rails"
+gem "less-rails-bootstrap"
+# -> https://github.com/metaskills/less-rails-bootstrap
 # Photo Upload
 #------------------------------------------------------------------------------
 # gem "carrierwave"
@@ -53,9 +56,9 @@ gem 'mysql2'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  #gem 'sass-rails'
+  gem "coffee-rails"
+  gem 'uglifier'
 
   # gem 'font-awesome-sass-rails', github: "littlebtc/font-awesome-sass-rails", branch: "master"
   # gem 'compass-rails', github: "ekampp/compass-rails"
@@ -72,15 +75,27 @@ group :development do
 #------------------------------------------------------------------------------
 
   gem 'debugger'
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'ruby-debug19'
 
   # gem 'linecache19', :git => 'git://github.com/mark-moseley/linecache'
-  # gem 'ruby-debug-base19x', '~> 0.11.30.pre4'
+   gem 'ruby-debug-base19x', '~> 0.11.30.pre4'
 
   gem "wirble"
   gem "awesome_print"
 
 end
+
+#-----------------------------------------
+# Testing Environment
+#-----------------------------------------
+
+#gem "rspec-rails", ">= 2.12.2",               :group => [:development, :test]
+#gem "database_cleaner", ">= 1.0.0.RC1",       :group => :test
+#gem "email_spec", ">= 1.4.0",                 :group => :test
+#gem "cucumber-rails",                         :group => :test, :require => false
+#gem "launchy", ">= 2.2.0",                    :group => :test
+#gem "capybara", ">= 2.0.3",                   :group => :test
+#gem "factory_girl_rails", ">= 4.2.0",         :group => [:development, :test]
 
 # Caching/ Russian Doll Caching [ Not Needed In Rails 4 ]
 # gem 'cache_digests'
@@ -99,8 +114,8 @@ end
 
 # JavaScript run time
 #------------------------------------------------------------------------------
-# gem 'execjs'
-# gem 'therubyracer'
+ gem 'execjs'
+ gem 'therubyracer'
 
 
 # Parse CSV
