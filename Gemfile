@@ -12,6 +12,8 @@ gem 'jquery-rails'
 #------------------------------------------------------------------------------
 gem 'mysql2'
 
+# Global configuration
+gem 'global'
 
 # gem 'mongoid', github: "ekampp/mongoid"
 # gem 'redis'
